@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: gallery
+  api_key: '783522671367958'
+  api_secret: mRKydtSlvbDvXhaUUFTzJF8cemE
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: gallery
+  api_key: '783522671367958'
+  api_secret: mRKydtSlvbDvXhaUUFTzJF8cemE
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: gallery
+  api_key: '783522671367958'
+  api_secret: mRKydtSlvbDvXhaUUFTzJF8cemE
+  enhance_image_tag: true
+  static_image_support: false

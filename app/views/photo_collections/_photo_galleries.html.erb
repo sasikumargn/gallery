@@ -1,0 +1,19 @@
+<% @photo_collections.each do |collection| %>
+   <% collection.attachments.each do |attachment| %>
+    <li>
+      <%=link_to(cl_image_tag(attachment.file.url(:standard).to_s), attachment.file.url, :data => { :'fancybox-group' => 'gallery' },:rel => "gallery", :class => "fancybox", :width => "150", :height => "121", :title => "#{attachment.name}-#{attachment.created_at.strftime('%d %b. %Y')}") %>
+    </li>
+   <% end %>
+<% end %>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$(".fancybox").fancybox({
+	   helpers : { 
+	    title : { type : 'inside' }
+	   }, // helpers
+	   beforeLoad: function() {
+	    this.title = $(this.element).attr('title');
+	   }
+	}); // fancybox
+  });
+</script>

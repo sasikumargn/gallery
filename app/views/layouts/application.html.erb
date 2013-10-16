@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "jquery-1.10.1.min", "jquery.fancybox", "jquery.fancybox.pack", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= cloudinary_js_config %> 
+  <%= javascript_include_tag "nested_form" %>
+</head>
+<body>
+
+<div id="wrapper">
+  <div id="wrapper-top"> </div>
+  <div id="left">
+    <h1 class="logo"><%= link_to "Gallery", root_path %></h1>
+    <ul class="menu">
+      <li> 
+      	<a href="/photos">Photo Collections</a>
+      </li>
+      <li> 
+        <%= link_to "My Photo Collections", own_collections_path %>
+      </li>
+      <li> 
+        <%= link_to "Image Galleries", galleries_path %>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div id="right">
+    <div style="margin-left:10px;">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </div>
+  <div id="wrapper-bottom"> </div>
+  </div>
+</body>
+</html>

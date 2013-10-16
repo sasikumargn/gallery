@@ -1,0 +1,48 @@
+<%= javascript_include_tag "pagination" %>
+<%= will_paginate @photo_collections %>
+  <table cellpadding=0 cellspacing=0 width="98%">
+	<th>Collection Name</th>
+	<th>Collection Description</th>
+	<th>Collection Photos</th>
+	<th>Created at</th>
+	<th>&nbsp;Edit</th>
+	<th>&nbsp;Delete</th>
+	<th>&nbsp;View</th>
+	<% @photo_collections.each do |collection| %>
+	<tr valign="top">
+	 <td><%= collection.name %></td>
+	 <td><%= collection.description %></td>
+	 <td>
+	 <% collection.attachments.each do |attachment| %>
+	    <%=link_to(cl_image_tag(attachment.file.url(:thumbnail).to_s), attachment.file.url, :data => { :'fancybox-group' => 'gallery' }, :class => "fancybox", :title => "#{attachment.name}-#{attachment.created_at.strftime('%d %b. %Y')}") %>
+	 <% end %>
+	</td>
+	<td>&nbsp;<%= collection.created_at.strftime("%d %b. %Y") %></td>
+	<% if current_user && current_user.id == collection.user.id %>
+		<td>
+			&nbsp;<%= link_to 'edit',edit_photo_collection_path(collection.id) %>
+		</td>
+		<td>
+			&nbsp;<%= link_to "Delete", photo_collection_path(collection.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+		</td>
+	<% else %>
+		<td>&nbsp;&nbsp;No Permission</td>
+		<td>&nbsp;&nbsp;No Permission</td>
+	<% end %>
+	<td>
+		<%= link_to "view", photo_collection_path(collection.token) %>
+	</td>
+	</tr>
+	<% end %>
+  </table>
+<%= will_paginate @photo_collections %>
+<script type="text/javascript">
+	$(".fancybox").fancybox({
+	   helpers : { 
+	    title : { type : 'inside' }
+	   }, // helpers
+	   beforeLoad: function() {
+	    this.title = $(this.element).attr('title');
+	   }
+	}); // fancybox
+</script>
