@@ -1,0 +1,103 @@
+
+
+Started GET "/own_collections" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PhotoCollectionsController#my_collections as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `photo_collections` WHERE `photo_collections`.`user_id` = ?[0m  [["user_id", 1]]
+  [1m[35mPhotoCollection Load (0.6ms)[0m  SELECT `photo_collections`.* FROM `photo_collections` WHERE `photo_collections`.`user_id` = ? LIMIT 7 OFFSET 0  [["user_id", 1]]
+  [1m[36mAttachment Load (0.6ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 2], ["attachable_type", "PhotoCollection"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.5ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 4], ["attachable_type", "PhotoCollection"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 6], ["attachable_type", "PhotoCollection"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 7], ["attachable_type", "PhotoCollection"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 8], ["attachable_type", "PhotoCollection"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.4ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 9], ["attachable_type", "PhotoCollection"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.5ms)[0m  [1mSELECT `attachments`.* FROM `attachments` WHERE `attachments`.`attachable_id` = ? AND `attachments`.`attachable_type` = ?[0m  [["attachable_id", 10], ["attachable_type", "PhotoCollection"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? ORDER BY `users`.`id` ASC LIMIT 1  [["id", 1]]
+  Rendered photo_collections/_photo_collections.html.erb (187.4ms)
+  Rendered photo_collections/my_collections.html.erb within layouts/application (204.2ms)
+Completed 200 OK in 539ms (Views: 384.6ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/errors.css?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/prettyPhoto.css?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/photo_collections.css?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/cloudinary/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:31 +0530
+
+
+Started GET "/assets/cloudinary/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/cloudinary/jquery.fileupload.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/cloudinary/jquery.cloudinary.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/cloudinary/index.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/errors.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/jquery.fancybox.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/pagination.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/photo_collections.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/content-bg.jpg" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/content-top.jpg" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
+
+
+Started GET "/assets/content-bottom.jpg" for 127.0.0.1 at 2013-10-17 14:32:32 +0530
