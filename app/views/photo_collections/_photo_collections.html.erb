@@ -10,7 +10,7 @@
 	<th>&nbsp;View</th>
 	<% @photo_collections.each do |collection| %>
 	<tr valign="top">
-	 <td><%= collection.name %></td>
+	 <td><%= link_to collection.name, photo_collection_path(collection.token) %></td>
 	 <td><%= collection.description %></td>
 	 <td>
 	 <% collection.attachments.each do |attachment| %>
