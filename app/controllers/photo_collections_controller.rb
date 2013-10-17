@@ -11,7 +11,6 @@ class PhotoCollectionsController < ApplicationController
 	end
 
 	def galleries
-		sleep 1
 		@photo_collections = PhotoCollection.all
 	end
 	

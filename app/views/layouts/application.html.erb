@@ -3,13 +3,12 @@
 <head>
   <title>Gallery</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "jquery-1.10.1.min", "jquery.fancybox", "jquery.fancybox.pack", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= cloudinary_js_config %> 
-  <%= javascript_include_tag "nested_form" %>
+  <%= javascript_include_tag "nested_form","jquery.fancybox", "jquery.fancybox.pack" %>
 </head>
 <body>
-
 <div id="wrapper">
   <div id="wrapper-top"> </div>
   <div id="left">

@@ -40,6 +40,7 @@ gem 'carrierwave'
 gem 'nested_form'
 gem 'cloudinary'
 gem 'will_paginate', '~> 3.0.5'
+gem 'jquery-turbolinks'
 
 
 # Use ActiveModel has_secure_password
