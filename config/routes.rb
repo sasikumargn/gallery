@@ -59,5 +59,5 @@ Gallery::Application.routes.draw do
   get 'own_collections' => 'photo_collections#my_collections'
   get 'galleries' => 'photo_collections#galleries'
   get 'photos/:token' => 'photo_collections#show'
-  #match "*path" => 'errors#handle404', :via => :get
+  match "*path" => 'errors#handle404', :via => :get
 end
